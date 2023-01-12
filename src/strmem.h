@@ -1,4 +1,4 @@
-/*********************** GNU General Public License 2.0 ***********************\
+/*********************** GNU General Public License 3.0 ***********************\
 |                                                                              |
 |  Copyright (C) 2023 Kevin Matthes                                            |
 |                                                                              |
@@ -28,5 +28,19 @@
  */
 
 /******************************************************************************/
+
+/**
+ * \brief   Prevent this header from being included twice.
+ *
+ * In case this header file should be included more than just once, unexpected
+ * side effects might take place.  This unintended behaviour will be avoided by
+ * the definition of this macro.
+ */
+
+#pragma once
+#ifndef __STRMEM_H__
+#define __STRMEM_H__
+
+#endif // ! __STRMEM_H__
 
 /******************************************************************************/
