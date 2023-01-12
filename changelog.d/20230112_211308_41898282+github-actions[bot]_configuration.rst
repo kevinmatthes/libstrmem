@@ -9,6 +9,8 @@ Added
 
 - CITATION.cff
 
+- create this CHANGELOG
+
 - Dependabot:  GitHub Action setup
 
 - GitHub Action workflow:  CFF validation
