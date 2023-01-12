@@ -11,6 +11,8 @@ Added
 
 - Dependabot:  GitHub Action setup
 
+- GitHub Action workflow:  CFF validation
+
 .. Changed
 .. .......
 ..
