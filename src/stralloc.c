@@ -23,7 +23,7 @@
 
 inline char * stralloc (const char * const string)
 {
-  const char * const buffer = strlmalloc (string);
+  const char * const buffer = strldmalloc (string);
   return buffer != NULL ? strcpy (buffer, string) : NULL;
 }
 
