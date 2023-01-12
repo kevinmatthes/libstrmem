@@ -32,7 +32,6 @@
 
 ## Summary
 
-[![](https://github.com/kevinmatthes/libstrmem/workflows/cffconvert/badge.svg)](https://github.com/kevinmatthes/libstrmem/workflows/cffconvert)
 [![](https://github.com/kevinmatthes/libstrmem/workflows/ci/badge.svg)](https://github.com/kevinmatthes/libstrmem/workflows/ci)
 [![](https://img.shields.io/github/license/kevinmatthes/libstrmem)](https://github.com/kevinmatthes/libstrmem)
 
