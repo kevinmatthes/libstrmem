@@ -5,7 +5,15 @@
 Added
 .....
 
+- bump2version:  track library version
+
+- constant:  library version
+
+- main header
+
 - source code directory
+
+- string memory allocation function
 
 .. Changed
 .. .......
