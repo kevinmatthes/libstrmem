@@ -71,6 +71,9 @@ extern const char * const strmem_version;
  * This function will create a deep copy of the given string.  As a result, a
  * pointer to the allocated memory region will be returned.  If the allocation
  * should fail for some reasons, `NULL` will be returned instead.
+ *
+ * The name `stralloc` originates from its purpose, the ***alloc***ation of
+ * ***str***ings.
  */
 
 extern char * stralloc (const char * const string);
@@ -85,17 +88,25 @@ extern char * stralloc (const char * const string);
  * \param       string   The string whose length shall be overtaken.
  * \returns     The pointer to allocated memory region.
  *
- * This function will allocate memory for a new string.  In order to determine
- * the size of the requested memory region, the given string's length will be
- * used.  In order to honour the C convention of zero-termination, the size
- * of the given string will be incremented by one before being processed.
+ * This function will allocate memory for a new string.  This is a utility
+ * function to be called by `stralloc` in order to create a deep copy of the
+ * given string.
+ *
+ * The memory region to be allocated will have a size of the length of the
+ * given string plus one.  The size of the given string is determined by its
+ * count of printable characters.  In order to match the C convention of string
+ * termination by zero, an extra character slot needs to be allocated, as well.
  *
  * The result of this function will be the pointer to the memory region which
  * was allocated.  In case that the allocation should fail, the result will be
  * `NULL`.
+ *
+ * The name `strldmalloc` originates from its purpose, the ***m***emory
+ * ***alloc***ation for ***str***ings with after a preceding ***l***ength
+ * ***d***etermination.
  */
 
-extern char * strlmalloc (const char * const string);
+extern char * strldmalloc (const char * const string);
 
 
 
