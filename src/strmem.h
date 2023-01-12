@@ -41,7 +41,9 @@
 #ifndef __STRMEM_H__
 #define __STRMEM_H__
 
+#include <stddef.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 
@@ -60,14 +62,31 @@ extern const char * const strmem_version;
 
 /**
  * \author      Kevin Matthes
+ * \brief       Create a deep copy of the given string.
+ * \copyright   GPL-3.0
+ * \date        2023
+ * \param       string   The string to create a deep copy from.
+ * \returns     The pointer to allocated memory region.
+ *
+ * This function will create a deep copy of the given string.  As a result, a
+ * pointer to the allocated memory region will be returned.  If the allocation
+ * should fail for some reasons, `NULL` will be returned instead.
+ */
+
+extern char * stralloc (const char * const string);
+
+
+
+/**
+ * \author      Kevin Matthes
  * \brief       Allocate memory for a new string.
  * \copyright   GPL-3.0
  * \date        2023
  * \param       string   The string whose length shall be overtaken.
  * \returns     The pointer to allocated memory region.
  *
- * This function will allocate for a new string.  In order to determine the
- * size of the requested memory region, the given string's length will be
+ * This function will allocate memory for a new string.  In order to determine
+ * the size of the requested memory region, the given string's length will be
  * used.  In order to honour the C convention of zero-termination, the size
  * of the given string will be incremented by one before being processed.
  *
@@ -76,7 +95,7 @@ extern const char * const strmem_version;
  * `NULL`.
  */
 
-extern char * strmalloc (const char * const string);
+extern char * strlmalloc (const char * const string);
 
 
 
