@@ -44,7 +44,10 @@
 
 
 /**
- * \brief   This library's version.
+ * \author      Kevin Matthes
+ * \brief       This library's version.
+ * \copyright   GPL-3.0
+ * \date        2023
  *
  * This constant holds the version of this library for future reference.
  */
@@ -54,9 +57,12 @@ extern const char * const strmem_version;
 
 
 /**
- * \brief   Allocate memory for a new string.
- * \param   string   The string whose length shall be overtaken.
- * \returns The pointer to allocated memory region.
+ * \author      Kevin Matthes
+ * \brief       Allocate memory for a new string.
+ * \copyright   GPL-3.0
+ * \date        2023
+ * \param       string   The string whose length shall be overtaken.
+ * \returns     The pointer to allocated memory region.
  *
  * This function will allocate for a new string.  In order to determine the
  * size of the requested memory region, the given string's length will be
