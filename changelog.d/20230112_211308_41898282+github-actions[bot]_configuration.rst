@@ -13,8 +13,6 @@ Added
 
 - Dependabot:  GitHub Action setup
 
-- GitHub Action workflow:  CFF validation
-
 - GitHub Action workflow:  release
 
 - README:  license information
