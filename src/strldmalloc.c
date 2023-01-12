@@ -17,11 +17,11 @@
 |                                                                              |
 \******************************************************************************/
 
-/// \file strlmalloc.c
+/// \file strldmalloc.c
 
 #include "strmem.h"
 
-inline char * strlmalloc (const char * const string)
+inline char * strldmalloc (const char * const string)
 {
   return (char *) malloc ((strlen (string) + 1) * sizeof (char));
 }
