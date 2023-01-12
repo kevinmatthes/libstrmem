@@ -5,17 +5,19 @@
 Added
 .....
 
-- bump2version:  settings
+- bump2version:  track library version
 
-- CITATION.cff
+- constant:  library version
 
-- create this CHANGELOG
+- GitHub Action workflow:  CI
 
-- Dependabot:  GitHub Action setup
+- main header
 
-- GitHub Action workflow:  release
+- source code directory
 
-- README:  license information
+- string deep copy function
+
+- string memory allocation function
 
 .. Changed
 .. .......

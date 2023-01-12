@@ -20,16 +20,16 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       Ensure the validity of this repository's CFF files.
+##  BRIEF       The CI of this project.
 ##  COPYRIGHT   GPL-3.0
 ##  DATE        2023
-##  FILE        cffconvert.yml
+##  FILE        ci.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: cffconvert
+name: ci
 
 on:
   pull_request:
@@ -39,6 +39,24 @@ permissions:
   contents: read
 
 jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3.3.0
+        with:
+          persist-credentials: false
+
+      - name: gcc
+        run: gcc -c -fPIC -std=c99 -Wall -Werror -Wextra -Wpedantic src/*.c
+
+      - name: ar
+        run: ar rs libstrmem.a *.o
+
+      - name: rm
+        run: rm -rf *.o
+
   cffconvert:
     name: cffconvert
     runs-on: ubuntu-latest
