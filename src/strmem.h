@@ -41,6 +41,37 @@
 #ifndef __STRMEM_H__
 #define __STRMEM_H__
 
+
+
+/**
+ * \brief   This library's version.
+ *
+ * This constant holds the version of this library for future reference.
+ */
+
+extern const char * const strmem_version;
+
+
+
+/**
+ * \brief   Allocate memory for a new string.
+ * \param   string   The string whose length shall be overtaken.
+ * \returns The pointer to allocated memory region.
+ *
+ * This function will allocate for a new string.  In order to determine the
+ * size of the requested memory region, the given string's length will be
+ * used.  In order to honour the C convention of zero-termination, the size
+ * of the given string will be incremented by one before being processed.
+ *
+ * The result of this function will be the pointer to the memory region which
+ * was allocated.  In case that the allocation should fail, the result will be
+ * `NULL`.
+ */
+
+extern char * stralloc (const char * const string);
+
+
+
 #endif // ! __STRMEM_H__
 
 /******************************************************************************/
