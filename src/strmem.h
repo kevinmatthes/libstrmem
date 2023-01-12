@@ -41,6 +41,8 @@
 #ifndef __STRMEM_H__
 #define __STRMEM_H__
 
+#include <stdlib.h>
+
 
 
 /**
@@ -74,7 +76,7 @@ extern const char * const strmem_version;
  * `NULL`.
  */
 
-extern char * stralloc (const char * const string);
+extern char * strmalloc (const char * const string);
 
 
 
