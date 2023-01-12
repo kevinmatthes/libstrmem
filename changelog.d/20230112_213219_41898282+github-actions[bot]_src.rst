@@ -9,6 +9,8 @@ Added
 
 - constant:  library version
 
+- GitHub Action workflow:  CI
+
 - main header
 
 - source code directory
