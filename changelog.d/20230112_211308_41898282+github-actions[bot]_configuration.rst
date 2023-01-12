@@ -17,6 +17,8 @@ Added
 
 - GitHub Action workflow:  release
 
+- README:  license information
+
 .. Changed
 .. .......
 ..
