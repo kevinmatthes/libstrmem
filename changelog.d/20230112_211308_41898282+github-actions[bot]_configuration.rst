@@ -13,6 +13,8 @@ Added
 
 - GitHub Action workflow:  CFF validation
 
+- GitHub Action workflow:  release
+
 .. Changed
 .. .......
 ..
