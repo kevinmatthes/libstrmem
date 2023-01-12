@@ -57,4 +57,18 @@ jobs:
       - name: rm
         run: rm -rf *.o
 
+  cffconvert:
+    name: cffconvert
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3.3.0
+        with:
+          persist-credentials: false
+
+      - name: cffconvert
+        uses: citation-file-format/cffconvert-github-action@2.0.0
+        with:
+          args: --validate
+
 ################################################################################
