@@ -63,7 +63,8 @@ jobs:
         with:
           key: library-${{ hashFiles ('./libstrmem.a') }}
           path: ./libstrmem.a
-          restore-keys: library-cache
+          restore-keys:
+            library-
 
   cffconvert:
     name: cffconvert
@@ -92,7 +93,7 @@ jobs:
       - name: cache
         uses: actions/cache/restore@v3.2.3
         with:
-          key: library-cache
+          key: library-
           path: ./libstrmem.a
 
       - name: gcc
@@ -122,7 +123,7 @@ jobs:
       - name: cache
         uses: actions/cache/restore@v3.2.3
         with:
-          key: library-cache
+          key: library-
           path: ./libstrmem.a
 
       - name: gcc
