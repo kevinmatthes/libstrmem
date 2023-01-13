@@ -58,7 +58,7 @@ jobs:
         run: rm -rf *.o
 
       - name: cache
-        uses: actions/cache/save@v3.0.0
+        uses: actions/cache/save@v3.2.3
         with:
           key: library
           path: ./libstrmem.a
@@ -91,7 +91,7 @@ jobs:
           persist-credentials: false
 
       - name: cache
-        uses: actions/cache/restore@v3.0.0
+        uses: actions/cache/restore@v3.2.3
         with:
           key: library
           path: ./libstrmem.a
