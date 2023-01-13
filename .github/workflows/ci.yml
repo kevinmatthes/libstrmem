@@ -57,10 +57,11 @@ jobs:
       - name: rm
         run: rm -rf *.o
 
-      - name: cache
+      - id: cache-library
+        name: cache
         uses: actions/cache/save@v3.2.3
         with:
-          key: library
+          key: library-${{ hashFiles ('./libstrmem.a') }}
           path: ./libstrmem.a
 
   cffconvert:
@@ -95,13 +96,15 @@ jobs:
         with:
           key: library
           path: ./libstrmem.a
+          restore-keys: |
+            library-
 
       - name: gcc
         run: |
           gcc \
             -fPIE -std=c99 -Wall -Werror -Wextra -Wpedantic \
-            tests/valgrind.c \
-            -o ./valgrind \
+            tests/${{ matrix.test-name }}.c \
+            -o ./${{ matrix.test-name }} \
             -L. -lstrmem
 
       - name: valgrind
@@ -111,6 +114,11 @@ jobs:
             --leak-check=full \
             --redzone-size=512 \
             --show-leak-kinds=all \
-            ./valgrind
+            ./${{ matrix.test-name }}
+    strategy:
+      matrix:
+        test-name:
+          - similarity
+          - valgrind
 
 ################################################################################
