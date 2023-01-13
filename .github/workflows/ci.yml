@@ -77,6 +77,33 @@ jobs:
         with:
           args: --validate
 
+  similarity:
+    name: similarity
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3.3.0
+        with:
+          persist-credentials: false
+
+      - name: cache
+        uses: actions/cache/restore@v3.2.3
+        with:
+          key: library
+          path: ./libstrmem.a
+
+      - name: gcc
+        run: |
+          gcc \
+            -fPIE -std=c99 -Wall -Werror -Wextra -Wpedantic \
+            tests/similarity.c \
+            -o ./similarity \
+            -L. -lstrmem
+
+      - name: run
+        run: ./similarity
+
   valgrind:
     name: valgrind
     needs: build
