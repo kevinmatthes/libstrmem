@@ -39,11 +39,11 @@
 
 int main (void)
 {
-  char * const buffer = stralloc ("valgrind");
-  free (buffer);
+  char * const buffer_1 = stralloc ("valgrind");
+  char * const buffer_2 = strldmalloc ("another text");
 
-  buffer = strldmalloc ("another text");
-  free (buffer);
+  free (buffer_1);
+  free (buffer_2);
 
   return 0;
 }
