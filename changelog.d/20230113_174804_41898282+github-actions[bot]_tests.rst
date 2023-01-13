@@ -5,6 +5,12 @@
 Added
 .....
 
+- CI:  build
+
+- CI:  CFF validation
+
+- CI:  Valgrind memory management analysis
+
 - create directory for unit tests
 
 .. Changed
