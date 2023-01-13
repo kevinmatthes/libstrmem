@@ -63,7 +63,7 @@ jobs:
         with:
           key: library-${{ hashFiles ('./libstrmem.a') }}
           path: ./libstrmem.a
-          restore-keys:
+          restore-keys: |
             library-
 
   cffconvert:
