@@ -42,7 +42,7 @@ int main (void)
 {
   const char * const  test_string = "This is the test string to copy.";
   char * const        buffer      = stralloc (test_string);
-  const int           differences = strcmp (test_string, "");
+  const int           differences = strcmp ("", test_string);
 
   free (buffer);
 
