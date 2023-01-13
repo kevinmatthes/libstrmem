@@ -91,6 +91,7 @@ jobs:
       - name: cache
         uses: actions/cache/restore@v3.2.3
         with:
+          key: library
           path: ./libstrmem.a
           restore-keys: |
             library-
@@ -122,6 +123,7 @@ jobs:
       - name: cache
         uses: actions/cache/restore@v3.2.3
         with:
+          key: library
           path: ./libstrmem.a
           restore-keys: |
             library-
