@@ -48,11 +48,14 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: cache
+      - env:
+          cache-name: build
+        name: cache
         uses: actions/cache@v3.2.3
         with:
-          key: ${{ runner.os }}-build
+          key: ${{ runner.os }}-${{ env.cache-name }}
           path: ./
+          restore-keys: ${{ runner.os }}-
 
       - name: gcc
         run: gcc -c -fPIC -std=c99 -Wall -Werror -Wextra -Wpedantic src/*.c
