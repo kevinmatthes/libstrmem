@@ -48,6 +48,12 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: cache
+        uses: actions/cache@v3.2.3
+        with:
+          key: ${{ runner.os }}-build
+          path: ./
+
       - name: gcc
         run: gcc -c -fPIC -std=c99 -Wall -Werror -Wextra -Wpedantic src/*.c
 
@@ -78,13 +84,6 @@ jobs:
     steps:
       - name: dependencies
         run: sudo apt-get install valgrind -y
-
-      - name: checkout
-        uses: actions/checkout@v3.3.0
-        with:
-          persist-credentials: false
-
-      - run: ls -ails
 
       - name: gcc
         run: |
