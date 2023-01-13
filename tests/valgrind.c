@@ -18,16 +18,34 @@
 \******************************************************************************/
 
 /**
- * \file strldmalloc.c
+ * \file valgrind.c
  */
 
 /******************************************************************************/
 
-#include "strmem.h"
+#include <stdlib.h>
+#include "../src/strmem.h"
 
-inline char * strldmalloc (const char * const string)
+/**
+ * \author      Kevin Matthes
+ * \brief       The memory management check.
+ * \copyright   GPL-3.0
+ * \date        2023
+ * \returns     Zero.
+ *
+ * This is the main function to be analysed by Valgrind in order to check the
+ * memory management of the library functions.
+ */
+
+int main (void)
 {
-  return (char *) malloc ((strlen (string) + 1) * sizeof (char));
+  char * const buffer_1 = stralloc ("valgrind");
+  char * const buffer_2 = strldmalloc ("another text");
+
+  free (buffer_1);
+  free (buffer_2);
+
+  return 0;
 }
 
 /******************************************************************************/
