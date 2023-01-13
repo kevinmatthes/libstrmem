@@ -57,10 +57,11 @@ jobs:
       - name: rm
         run: rm -rf *.o
 
-      - name: cache
+      - id: cache-library
+        name: cache
         uses: actions/cache/save@v3.2.3
         with:
-          key: library
+          key: library-${{ hashFiles ('./libstrmem.a') }}
           path: ./libstrmem.a
 
   cffconvert:
@@ -90,7 +91,7 @@ jobs:
       - name: cache
         uses: actions/cache/restore@v3.2.3
         with:
-          key: library
+          key: ${{ build.steps.cache-library.outputs.cache-primary-key }}
           path: ./libstrmem.a
 
       - name: gcc
@@ -120,7 +121,7 @@ jobs:
       - name: cache
         uses: actions/cache/restore@v3.2.3
         with:
-          key: library
+          key: ${{ build.steps.cache-library.outputs.cache-primary-key }}
           path: ./libstrmem.a
 
       - name: gcc
