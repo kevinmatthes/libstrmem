@@ -18,19 +18,16 @@
 \******************************************************************************/
 
 /**
- * \author      Kevin Matthes
- * \brief       The main header of this library.
- * \copyright   GPL-3.0
- * \date        2023
- * \file        strmem.h
- * \note        See `LICENSE' for full license.
- *              See `README.md' for project details.
+ * \file strmem.h
  */
 
 /******************************************************************************/
 
 /**
- * \brief   Prevent this header from being included twice.
+ * \author      Kevin Matthes
+ * \brief       Prevent this header from being included twice.
+ * \copyright   GPL-3.0
+ * \date        2023
  *
  * In case this header file should be included more than just once, unexpected
  * side effects might take place.  This unintended behaviour will be avoided by
