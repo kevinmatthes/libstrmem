@@ -91,7 +91,7 @@ jobs:
       - name: cache
         uses: actions/cache/restore@v3.2.3
         with:
-          key: ${{ build.steps.cache-library.outputs.cache-primary-key }}
+          key: ${{ jobs.build.steps.cache-library.outputs.cache-primary-key }}
           path: ./libstrmem.a
 
       - name: gcc
@@ -121,7 +121,7 @@ jobs:
       - name: cache
         uses: actions/cache/restore@v3.2.3
         with:
-          key: ${{ build.steps.cache-library.outputs.cache-primary-key }}
+          key: ${{ jobs.build.steps.cache-library.outputs.cache-primary-key }}
           path: ./libstrmem.a
 
       - name: gcc
