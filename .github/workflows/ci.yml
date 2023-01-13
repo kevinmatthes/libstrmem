@@ -48,15 +48,6 @@ jobs:
         with:
           persist-credentials: false
 
-      - env:
-          cache-name: build
-        name: cache
-        uses: actions/cache@v3.2.3
-        with:
-          key: ${{ runner.os }}-${{ env.cache-name }}
-          path: ./
-          restore-keys: ${{ runner.os }}-
-
       - name: gcc
         run: gcc -c -fPIC -std=c99 -Wall -Werror -Wextra -Wpedantic src/*.c
 
@@ -65,6 +56,12 @@ jobs:
 
       - name: rm
         run: rm -rf *.o
+
+      - name: cache
+        uses: actions/cache/save@v3.0.0
+        with:
+          key: library
+          path: ./libstrmem.a
 
   cffconvert:
     name: cffconvert
@@ -87,6 +84,17 @@ jobs:
     steps:
       - name: dependencies
         run: sudo apt-get install valgrind -y
+
+      - name: checkout
+        uses: actions/checkout@v3.3.0
+        with:
+          persist-credentials: false
+
+      - name: cache
+        uses: actions/cache/restore@v3.0.0
+        with:
+          key: library
+          path: ./libstrmem.a
 
       - name: gcc
         run: |
