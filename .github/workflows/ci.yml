@@ -84,6 +84,8 @@ jobs:
         with:
           persist-credentials: false
 
+      - run: ls -ails
+
       - name: gcc
         run: |
           gcc \
