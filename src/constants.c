@@ -18,13 +18,7 @@
 \******************************************************************************/
 
 /**
- * \author      Kevin Matthes
- * \brief       The constants of this library.
- * \copyright   GPL-3.0
- * \date        2023
- * \file        constants.c
- * \note        See `LICENSE' for full license.
- *              See `README.md' for project details.
+ * \file constants.c
  */
 
 /******************************************************************************/
