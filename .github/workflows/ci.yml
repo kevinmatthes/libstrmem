@@ -59,7 +59,7 @@ jobs:
 
       - id: cache-library
         name: cache
-        uses: actions/cache/save@v3.2.3
+        uses: actions/cache/save@v3.2.4
         with:
           key: library-${{ hashFiles ('./libstrmem.a') }}
           path: ./libstrmem.a
@@ -92,7 +92,7 @@ jobs:
           persist-credentials: false
 
       - name: cache
-        uses: actions/cache/restore@v3.2.3
+        uses: actions/cache/restore@v3.2.4
         with:
           key: library
           path: ./libstrmem.a
