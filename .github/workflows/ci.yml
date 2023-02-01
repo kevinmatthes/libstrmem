@@ -57,8 +57,7 @@ jobs:
       - name: rm
         run: rm -rf *.o
 
-      - id: cache-library
-        name: cache
+      - name: cache
         uses: actions/cache/save@v3.2.4
         with:
           key: library-${{ hashFiles ('./libstrmem.a') }}
