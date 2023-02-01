@@ -50,6 +50,23 @@ All pending changelog entries are stored in `changelog.d`_.
 
 .. scriv-insert-here
 
+.. _changelog-0.1.1:
+
+0.1.1 — 2023-02-01
+------------------
+
+Added
+.....
+
+- build:  create initial ``.justfile``
+
+- repository:  create ``.gitignore``
+
+Removed
+.......
+
+- CI:  ID of library caching step in GitHub Action workflow
+
 .. _changelog-0.1.0:
 
 0.1.0 — 2023-01-13
