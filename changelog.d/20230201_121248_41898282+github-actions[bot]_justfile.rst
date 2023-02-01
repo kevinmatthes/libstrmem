@@ -7,6 +7,8 @@ Added
 
 - build:  create initial ``.justfile``
 
+- repository:  create ``.gitignore``
+
 .. Changed
 .. .......
 ..
