@@ -50,6 +50,7 @@ library := 'libstrmem.a'
 @build:
   just compile src/constants.c
   just compile src/stralloc.c
+  just compile src/strid.c
   just compile src/strldmalloc.c
 
 # Compile a single source file and add it to the target library.
