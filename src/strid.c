@@ -27,7 +27,7 @@
 
 inline bool strid (const char * const a, const char * const b)
 {
-  return strcmp (a, b) == 0;
+  return a != NULL && b != NULL ? strcmp (a, b) == 0 : false;
 }
 
 /******************************************************************************/
