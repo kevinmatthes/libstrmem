@@ -24,7 +24,7 @@
 /******************************************************************************/
 
 #include <stddef.h>
-#incldue <sysecits.h>
+#include <sysexits.h>
 #include "../src/strmem.h"
 
 /**
