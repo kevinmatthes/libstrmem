@@ -7,11 +7,11 @@ Added
 
 - string identity checking function
 
-.. Changed
-.. .......
-..
-.. - A bullet item for the Changed category.
-..
+Changed
+.......
+
+- CI:  increase verbosity level of library compilation step
+
 .. Deprecated
 .. ..........
 ..
