@@ -38,6 +38,7 @@
 #ifndef __STRMEM_H__
 #define __STRMEM_H__
 
+#include <stdbool.h>
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
@@ -74,6 +75,26 @@ extern const char * const strmem_version;
  */
 
 extern char * stralloc (const char * const string);
+
+
+
+/**
+ * \author      Kevin Matthes
+ * \brief       Check whether the two given strings are identical.
+ * \copyright   GPL-3.0
+ * \date        2023
+ * \param       a   The first string to compare.
+ * \param       b   The second string to compare.
+ * \returns     Whether `a` and `b` are identical.
+ *
+ * Two strings are identical if and only if they both are of the same length
+ * and both contain exactly the same characters.
+ *
+ * The name `strid` originates from its purpose, the ***id***entity check for
+ * two given ***str***ings.
+ */
+
+extern bool strid (const char * const a, const char * const b);
 
 
 
