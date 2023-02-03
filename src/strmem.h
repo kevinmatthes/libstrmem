@@ -90,6 +90,12 @@ extern char * stralloc (const char * const string);
  * Two strings are identical if and only if they both are of the same length
  * and both contain exactly the same characters.
  *
+ * This function is part of this library as the string identity comparison
+ * also contains a memory aspect:  what if at least one of the strings to
+ * compare is `NULL`?  This function will consider two `NULL`s identical as
+ * they share their address.  If only one string is `NULL`, the result is
+ * immediately `false`.
+ *
  * The name `strid` originates from its purpose, the ***id***entity check for
  * two given ***str***ings.
  */
