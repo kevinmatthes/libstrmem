@@ -7,6 +7,8 @@ Added
 
 - string identity checking function
 
+- unit test:  string identity
+
 Changed
 .......
 
