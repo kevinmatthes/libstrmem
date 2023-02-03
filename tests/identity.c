@@ -50,6 +50,19 @@ int main (void)
   if (! strid (text_3, text_3)) exit (EX_SOFTWARE);
   if (! strid (text_4, text_4)) exit (EX_SOFTWARE);
 
+  if (strid (text_1, text_2)) exit (EX_SOFTWARE);
+  if (strid (text_1, text_3)) exit (EX_SOFTWARE);
+  if (strid (text_1, text_4)) exit (EX_SOFTWARE);
+  if (strid (text_2, text_1)) exit (EX_SOFTWARE);
+  if (strid (text_2, text_3)) exit (EX_SOFTWARE);
+  if (strid (text_2, text_4)) exit (EX_SOFTWARE);
+  if (strid (text_3, text_1)) exit (EX_SOFTWARE);
+  if (strid (text_3, text_2)) exit (EX_SOFTWARE);
+  if (strid (text_3, text_4)) exit (EX_SOFTWARE);
+  if (strid (text_4, text_1)) exit (EX_SOFTWARE);
+  if (strid (text_4, text_2)) exit (EX_SOFTWARE);
+  if (strid (text_4, text_3)) exit (EX_SOFTWARE);
+
   return 0;
 }
 
