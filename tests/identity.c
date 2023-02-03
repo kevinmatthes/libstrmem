@@ -45,10 +45,10 @@ int main (void)
   const char * const text_3 = "";
   const char * const text_4 = NULL;
 
-  if (! strid (text_1, text_1)) exit (E_SOFTWARE);
-  if (! strid (text_2, text_2)) exit (E_SOFTWARE);
-  if (! strid (text_3, text_3)) exit (E_SOFTWARE);
-  if (! strid (text_4, text_4)) exit (E_SOFTWARE);
+  if (! strid (text_1, text_1)) exit (EX_SOFTWARE);
+  if (! strid (text_2, text_2)) exit (EX_SOFTWARE);
+  if (! strid (text_3, text_3)) exit (EX_SOFTWARE);
+  if (! strid (text_4, text_4)) exit (EX_SOFTWARE);
 
   return 0;
 }
