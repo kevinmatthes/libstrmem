@@ -50,6 +50,23 @@ All pending changelog entries are stored in `changelog.d`_.
 
 .. scriv-insert-here
 
+.. _changelog-0.1.2:
+
+0.1.2 — 2023-02-03
+------------------
+
+Added
+.....
+
+- string identity checking function
+
+- unit test:  string identity
+
+Changed
+.......
+
+- CI:  increase verbosity level of library compilation step
+
 .. _changelog-0.1.1:
 
 0.1.1 — 2023-02-01

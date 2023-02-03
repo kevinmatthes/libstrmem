@@ -25,6 +25,6 @@
 
 #include "strmem.h"
 
-const char * const strmem_version = "v0.1.1";
+const char * const strmem_version = "v0.1.2";
 
 /******************************************************************************/
