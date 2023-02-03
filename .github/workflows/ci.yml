@@ -117,6 +117,7 @@ jobs:
     strategy:
       matrix:
         test-name:
+          - identity
           - similarity
           - valgrind
 
