@@ -32,6 +32,7 @@
 
 ## Summary
 
+[![](https://bors.tech/images/badge_small.svg)](https://app.bors.tech/repositories/60642)
 [![](https://github.com/kevinmatthes/libstrmem/workflows/ci/badge.svg)](https://github.com/kevinmatthes/libstrmem/workflows/ci)
 [![](https://img.shields.io/github/license/kevinmatthes/libstrmem)](https://github.com/kevinmatthes/libstrmem)
 
