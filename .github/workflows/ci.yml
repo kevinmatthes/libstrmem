@@ -39,6 +39,17 @@ permissions:
   contents: read
 
 jobs:
+  bors:
+    name: bors
+    needs:
+      - build
+      - cffconvert
+      - valgrind
+    runs-on: ubuntu-latest
+    steps:
+      - name: success
+        run: bash -c 'exit 0'
+
   build:
     name: build
     runs-on: ubuntu-latest
