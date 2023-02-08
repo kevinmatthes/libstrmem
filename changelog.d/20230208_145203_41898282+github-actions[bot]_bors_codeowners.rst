@@ -5,7 +5,7 @@
 Added
 .....
 
-- Bors:  settings
+- Bors:  initial setup
 
 - CODEOWNERS
 
